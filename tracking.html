@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Track Shipment — Nordfreight Logistics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / Tracking</div>
+    <h1>Track your shipment</h1>
+    <p class="lead" style="margin-bottom:34px">Enter your tracking number for live status and estimated delivery.</p>
+    <form class="track-box" id="trackForm" novalidate>
+      <input id="trackId" type="text" placeholder="e.g. NF123456789" aria-label="Tracking number" autocomplete="off">
+      <button class="btn btn-primary" type="submit">Track →</button>
+    </form>
+    <div id="trackMsg" class="alert" style="max-width:680px"></div>
+    <p style="margin-top:16px;color:var(--steel-300);font-size:.85rem">Demo: try <b>NF123456789</b> or any number in the format NF + 9 digits.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="result" id="trackResult">
+      <div class="form-card">
+        <span class="eyebrow">Shipment</span>
+        <h2 id="rId" style="margin-bottom:6px"></h2>
+        <p class="muted">Current status: <b id="rStatus" style="color:var(--navy-800)"></b></p>
+        <div class="progress"><i id="rBar" style="width:0"></i></div>
+        <div class="meta-grid">
+          <div><small>Origin</small><b>Rotterdam, NL</b></div>
+          <div><small>Destination</small><b>New York, US</b></div>
+          <div><small>Service</small><b>Ocean · Reefer</b></div>
+          <div><small>Estimated delivery</small><b id="rEta"></b></div>
+        </div>
+        <h3 style="margin:30px 0 20px">Shipment history</h3>
+        <div class="timeline" id="rTimeline"></div>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:50px">
+      <div class="card reveal"><h3>Where is my number?</h3><p>Your tracking number (starting with NF) is on your booking confirmation and waybill.</p></div>
+      <div class="card reveal"><h3>Need updates by email?</h3><p>Our client portal can send proactive alerts at every milestone.</p></div>
+      <div class="card reveal"><h3>Something looks wrong?</h3><p>Call our 24/7 control tower at +1 (800) 555-0142 and we will investigate immediately.</p></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="main.js"></script>
+</body>
+</html>

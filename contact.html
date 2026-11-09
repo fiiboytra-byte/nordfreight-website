@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact &amp; Quote — Nordfreight Logistics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+    <h1>Request a quote</h1>
+    <p class="lead">Tell us about your cargo. A logistics specialist will respond within 2 business hours.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:start">
+    <form class="form-card" data-validate novalidate>
+      <div class="form-grid">
+        <div class="field"><label for="name">Full name *</label><input id="name" name="name" required><span class="err-msg">Required</span></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company"></div>
+        <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required><span class="err-msg">Enter a valid email</span></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
+        <div class="field"><label for="service">Service *</label>
+          <select id="service" name="service" required>
+            <option value="">Select…</option><option>Air Freight</option><option>Ocean Freight</option><option>Road Transport</option><option>Cold Chain</option><option>Warehousing</option><option>Customs Brokerage</option>
+          </select><span class="err-msg">Required</span></div>
+        <div class="field"><label for="weight">Estimated weight (kg)</label><input id="weight" name="weight" type="number" min="0"></div>
+        <div class="field"><label for="from">Origin *</label><input id="from" name="from" required placeholder="City, country"><span class="err-msg">Required</span></div>
+        <div class="field"><label for="to">Destination *</label><input id="to" name="to" required placeholder="City, country"><span class="err-msg">Required</span></div>
+        <div class="field full"><label for="msg">Cargo details *</label><textarea id="msg" name="msg" required placeholder="Type of goods, temperature requirements, dimensions, timeline…"></textarea><span class="err-msg">Required</span></div>
+      </div>
+      <button class="btn btn-primary" type="submit" style="margin-top:24px">Send request →</button>
+      <div class="alert"></div>
+      <p class="form-note">We never share your information. Replies within 2 business hours.</p>
+    </form>
+
+    <aside style="display:grid;gap:22px">
+      <div class="card"><h3>Control Tower (24/7)</h3><p>+1 (800) 555-0142<br>ops@nordfreight.com</p></div>
+      <div class="card"><h3>Headquarters</h3><p>120 Harbor Avenue, Suite 900<br>Rotterdam, Netherlands</p></div>
+      <div class="card"><h3>Regional offices</h3><p>New York · Singapore · Dubai · Hamburg · Shanghai · São Paulo</p></div>
+    </aside>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="main.js"></script>
+<style>@media(max-width:900px){section .container[style*="1.4fr"]{grid-template-columns:1fr!important}}</style>
+</body>
+</html>
